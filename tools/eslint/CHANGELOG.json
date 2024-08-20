@@ -1,0 +1,20 @@
+{
+  "name": "@zeroqs/eslint",
+  "entries": [
+    {
+      "date": "Tue, 20 Aug 2024 23:21:44 GMT",
+      "version": "1.0.1",
+      "tag": "@zeroqs/eslint_v1.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "smthq@bk.ru",
+            "package": "@zeroqs/eslint",
+            "commit": "not available",
+            "comment": "add meta info"
+          }
+        ]
+      }
+    }
+  ]
+}

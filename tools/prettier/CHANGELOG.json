@@ -1,0 +1,20 @@
+{
+  "name": "@zeroqs/prettier",
+  "entries": [
+    {
+      "date": "Tue, 20 Aug 2024 23:21:44 GMT",
+      "version": "1.0.1",
+      "tag": "@zeroqs/prettier_v1.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "smthq@bk.ru",
+            "package": "@zeroqs/prettier",
+            "commit": "not available",
+            "comment": "add meta info"
+          }
+        ]
+      }
+    }
+  ]
+}

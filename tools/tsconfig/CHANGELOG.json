@@ -1,0 +1,20 @@
+{
+  "name": "@zeroqs/tsconfig",
+  "entries": [
+    {
+      "date": "Tue, 20 Aug 2024 23:21:44 GMT",
+      "version": "1.0.1",
+      "tag": "@zeroqs/tsconfig_v1.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "smthq@bk.ru",
+            "package": "@zeroqs/tsconfig",
+            "commit": "not available",
+            "comment": "add meta info"
+          }
+        ]
+      }
+    }
+  ]
+}
