@@ -1,0 +1,32 @@
+{
+  "name": "@zeroqs/prettier",
+  "description": "prettier configs",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "prettier"
+  ],
+  "author": {
+    "name": "zeroqs",
+    "url": "https://github.com/zeroqs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    ".prettierrc.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"*.js\""
+  },
+  "lint-staged": {
+    "*.js": "prettier --write"
+  },
+  "peerDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "prettier": "^3.2.5"
+  }
+}

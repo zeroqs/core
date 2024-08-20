@@ -1,0 +1,22 @@
+{
+  "name": "@zeroqs/tsconfig",
+  "description": "typescript config",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "stylelint"
+  ],
+  "author": {
+    "name": "zeroqs",
+    "url": "https://github.com/zeroqs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "tsconfig.react.json"
+  ],
+  "peerDependencies": {
+    "typescript": "^4.9.5 || ^5.0.0"
+  }
+}
