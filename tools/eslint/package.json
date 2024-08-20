@@ -7,6 +7,13 @@
     "name": "zeroqs",
     "url": "https://github.com/zeroqs"
   },
+  "homepage": "https://github.com/zeroqs/core",
+  "repository": {
+    "url": "https://github.com/zeroqs/core"
+  },
+  "bugs": {
+    "url": "https://github.com/zeroqs/core/issues"
+  },
   "license": "MIT",
   "keywords": [
     "eslint",
