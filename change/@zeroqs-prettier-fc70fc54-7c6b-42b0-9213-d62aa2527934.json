@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "docs: add prettier readme",
-  "packageName": "@zeroqs/prettier",
-  "email": "smthq@bk.ru",
-  "dependentChangeType": "patch"
-}
