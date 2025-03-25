@@ -2,6 +2,21 @@
   "name": "@zeroqs/prettier",
   "entries": [
     {
+      "date": "Tue, 25 Mar 2025 23:53:16 GMT",
+      "version": "2.0.0",
+      "tag": "@zeroqs/prettier_v2.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "smthq@bk.ru",
+            "package": "@zeroqs/prettier",
+            "commit": "5b367f30fd02c113ac3765d5b9ed2bd2da3f303f",
+            "comment": "docs: add prettier readme"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 20 Aug 2024 23:21:44 GMT",
       "version": "1.0.1",
       "tag": "@zeroqs/prettier_v1.0.1",
