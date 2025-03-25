@@ -1,15 +1,32 @@
+import { fixupPluginRules } from '@eslint/compat';
+
 import antfu from '@antfu/eslint-config';
 import pluginNext from '@next/eslint-plugin-next';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import pluginReact from 'eslint-plugin-react';
-import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
+import * as effectorRule from 'eslint-plugin-effector';
 
 /** @type {import('@zeroqs/eslint').Eslint} */
-export const eslint = ({ jsxA11y = false, next = false, effector = false, ...options }, ...configs) => {
+export const eslint = (
+  { jsxA11y = false, next = false, effector = false, ...options },
+  ...configs
+) => {
   const stylistic = options.stylistic ?? false;
 
-  //TODO
-  // if (effector) {}
+  if (effector) {
+    configs.unshift({
+      plugins: {
+        'zeroqs-effector': fixupPluginRules(effectorRule)
+      },
+      name: 'zeroqs/effector',
+      rules: {
+        ...Object.entries(effectorRule.configs.recommended.rules).reduce((acc, [key, value]) => {
+          acc[key.replace('effector', 'zeroqs-effector')] = value;
+          return acc;
+        }, {})
+      }
+    });
+  }
 
   if (next) {
     configs.unshift({
@@ -110,39 +127,88 @@ export const eslint = ({ jsxA11y = false, next = false, effector = false, ...opt
     {
       name: 'zeroqs/rewrite',
       rules: {
-        'antfu/top-level-function': 'off',
-        'antfu/if-newline': 'off',
         'antfu/curly': 'off',
+        'antfu/if-newline': 'off',
+        'antfu/top-level-function': 'off',
+
+        'no-console': 'warn',
 
         'react-hooks/exhaustive-deps': 'off',
 
-        'test/prefer-lowercase-title': 'off',
-
-        'no-console': 'warn'
+        'test/prefer-lowercase-title': 'off'
       }
     },
     {
       name: 'zeroqs/imports',
-      plugins: {
-        'plugin-simple-import-sort': pluginSimpleImportSort
-      },
       rules: {
-        'sort-imports': 'off',
-        'import/order': 'off',
-        'import/extensions': 'off',
-        'plugin-simple-import-sort/exports': 'error',
-        'plugin-simple-import-sort/imports': [
+        'perfectionist/sort-array-includes': [
+          'error',
+          {
+            order: 'asc',
+            type: 'alphabetical'
+          }
+        ],
+        'perfectionist/sort-imports': [
           'error',
           {
             groups: [
-              ['^react', '^@?\\w'],
-              ['^@(zeroqs-core/.*|$)'],
-              ['^@(([\\/.]?\\w)|assets|test-utils)'],
-              ['^\\u0000'],
-              ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-              ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-              ['^.+\\.s?css$']
-            ]
+              'type',
+              ['builtin', 'external'],
+              'internal-type',
+              ['internal'],
+              ['parent-type', 'sibling-type', 'index-type'],
+              ['parent', 'sibling', 'index'],
+              'object',
+              'style',
+              'side-effect-style',
+              'unknown'
+            ],
+            internalPattern: ['^~/.*', '^@/.*'],
+            newlinesBetween: 'always',
+            order: 'asc',
+            type: 'natural'
+          }
+        ],
+        'perfectionist/sort-interfaces': [
+          'error',
+          {
+            groups: ['unknown', 'method', 'multiline'],
+            order: 'asc',
+            type: 'alphabetical'
+          }
+        ],
+        'perfectionist/sort-jsx-props': [
+          'error',
+          {
+            customGroups: {
+              callback: 'on*',
+              reserved: ['key', 'ref']
+            },
+            groups: ['shorthand', 'reserved', 'multiline', 'unknown', 'callback'],
+            order: 'asc',
+            type: 'alphabetical'
+          }
+        ],
+        'perfectionist/sort-union-types': [
+          'error',
+          {
+            groups: [
+              'conditional',
+              'function',
+              'import',
+              'intersection',
+              'keyword',
+              'literal',
+              'named',
+              'object',
+              'operator',
+              'tuple',
+              'union',
+              'nullish'
+            ],
+            order: 'asc',
+            specialCharacters: 'keep',
+            type: 'alphabetical'
           }
         ]
       }
