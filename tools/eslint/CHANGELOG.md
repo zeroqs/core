@@ -1,8 +1,17 @@
 # Change Log - @zeroqs/eslint
 
-This log was last generated on Tue, 25 Mar 2025 23:52:36 GMT and should not be manually modified.
+This log was last generated on Tue, 25 Mar 2025 23:57:45 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.1.3
+
+Tue, 25 Mar 2025 23:57:45 GMT
+
+### Patches
+
+- edit readme (smthq@bk.ru)
+- fix effector parsing rules (smthq@bk.ru)
 
 ## 1.1.2
 
