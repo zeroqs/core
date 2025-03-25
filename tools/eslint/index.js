@@ -1,10 +1,9 @@
-import { fixupPluginRules } from '@eslint/compat';
-
 import antfu from '@antfu/eslint-config';
+import { fixupPluginRules } from '@eslint/compat';
 import pluginNext from '@next/eslint-plugin-next';
+import * as effectorRule from 'eslint-plugin-effector';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import pluginReact from 'eslint-plugin-react';
-import * as effectorRule from 'eslint-plugin-effector';
 
 /** @type {import('@zeroqs/eslint').Eslint} */
 export const eslint = (
@@ -20,7 +19,7 @@ export const eslint = (
       },
       name: 'zeroqs/effector',
       rules: {
-        ...Object.entries(effectorRule.configs.recommended.rules).reduce((acc, [key, value]) => {
+        ...Object.entries(effectorRule.default.configs.recommended.rules).reduce((acc, [key, value]) => {
           acc[key.replace('effector', 'zeroqs-effector')] = value;
           return acc;
         }, {})

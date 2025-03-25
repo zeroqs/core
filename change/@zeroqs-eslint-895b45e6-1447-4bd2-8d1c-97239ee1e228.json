@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix effector parsing rules",
+  "packageName": "@zeroqs/eslint",
+  "email": "smthq@bk.ru",
+  "dependentChangeType": "patch"
+}
