@@ -1,4 +1,5 @@
 import antfu from '@antfu/eslint-config';
+import { fixupPluginRules } from '@eslint/compat';
 import pluginNext from '@next/eslint-plugin-next';
 import * as effectorRule from 'eslint-plugin-effector';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
@@ -14,7 +15,7 @@ export const eslint = (
   if (effector) {
     configs.unshift({
       plugins: {
-        effector: effectorRule.default
+        effector: fixupPluginRules(effectorRule.default)
       },
       name: 'effector',
       rules: effectorRule.default.configs.recommended.rules
