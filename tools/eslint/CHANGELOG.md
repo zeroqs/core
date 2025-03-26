@@ -1,8 +1,16 @@
 # Change Log - @zeroqs/eslint
 
-This log was last generated on Wed, 26 Mar 2025 00:08:27 GMT and should not be manually modified.
+This log was last generated on Wed, 26 Mar 2025 00:12:10 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.2.1
+
+Wed, 26 Mar 2025 00:12:10 GMT
+
+### Patches
+
+- fix: use original effector plugin name (your-email@example.com)
 
 ## 1.2.0
 
