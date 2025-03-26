@@ -1,5 +1,4 @@
 import antfu from '@antfu/eslint-config';
-import { fixupPluginRules } from '@eslint/compat';
 import pluginNext from '@next/eslint-plugin-next';
 import * as effectorRule from 'eslint-plugin-effector';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
@@ -15,22 +14,10 @@ export const eslint = (
   if (effector) {
     configs.unshift({
       plugins: {
-        effector: fixupPluginRules(effectorRule)
+        effector: effectorRule.default
       },
       name: 'effector',
-      rules: {
-        'effector/enforce-store-naming-convention': 'error',
-        'effector/enforce-effect-naming-convention': 'error',
-        'effector/no-getState': 'error',
-        'effector/no-useless-methods': 'error',
-        'effector/no-unnecessary-duplication': 'warn',
-        'effector/prefer-sample-over-forward-with-mapping': 'warn',
-        'effector/no-ambiguity-target': 'warn',
-        'effector/no-watch': 'warn',
-        'effector/no-unnecessary-combination': 'warn',
-        'effector/no-duplicate-on': 'error',
-        'effector/keep-options-order': 'warn'
-      }
+      rules: effectorRule.default.configs.recommended.rules
     });
   }
 
