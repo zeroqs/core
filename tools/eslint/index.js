@@ -15,15 +15,10 @@ export const eslint = (
   if (effector) {
     configs.unshift({
       plugins: {
-        'zeroqs-effector': fixupPluginRules(effectorRule)
+        effector: fixupPluginRules(effectorRule)
       },
-      name: 'zeroqs/effector',
-      rules: {
-        ...Object.entries(effectorRule.default.configs.recommended.rules).reduce((acc, [key, value]) => {
-          acc[key.replace('effector', 'zeroqs-effector')] = value;
-          return acc;
-        }, {})
-      }
+      name: 'effector',
+      rules: effectorRule.default.configs.recommended.rules
     });
   }
 
