@@ -1,8 +1,16 @@
 # Change Log - @zeroqs/eslint
 
-This log was last generated on Wed, 26 Mar 2025 00:25:14 GMT and should not be manually modified.
+This log was last generated on Wed, 26 Mar 2025 00:30:20 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.2.5
+
+Wed, 26 Mar 2025 00:30:20 GMT
+
+### Patches
+
+- fix: use effector recommended config (smthq@bk.ru)
 
 ## 1.2.4
 

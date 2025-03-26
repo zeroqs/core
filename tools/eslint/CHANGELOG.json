@@ -2,6 +2,21 @@
   "name": "@zeroqs/eslint",
   "entries": [
     {
+      "date": "Wed, 26 Mar 2025 00:30:20 GMT",
+      "version": "1.2.5",
+      "tag": "@zeroqs/eslint_v1.2.5",
+      "comments": {
+        "patch": [
+          {
+            "author": "smthq@bk.ru",
+            "package": "@zeroqs/eslint",
+            "commit": "not available",
+            "comment": "fix: use effector recommended config"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 26 Mar 2025 00:25:14 GMT",
       "version": "1.2.4",
       "tag": "@zeroqs/eslint_v1.2.4",
