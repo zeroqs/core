@@ -1,5 +1,5 @@
 import antfu from '@antfu/eslint-config';
-import { fixupPluginRules } from '@eslint/compat';
+import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 import pluginNext from '@next/eslint-plugin-next';
 import * as effectorRule from 'eslint-plugin-effector';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
@@ -18,7 +18,7 @@ export const eslint = (
         effector: fixupPluginRules(effectorRule)
       },
       name: 'effector',
-      rules: effectorRule.default.configs.recommended.rules
+      rules: fixupConfigRules(effectorRule.default.configs.recommended.rules)
     });
   }
 
