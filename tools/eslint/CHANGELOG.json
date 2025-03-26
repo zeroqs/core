@@ -2,6 +2,21 @@
   "name": "@zeroqs/eslint",
   "entries": [
     {
+      "date": "Wed, 26 Mar 2025 00:18:13 GMT",
+      "version": "1.2.2",
+      "tag": "@zeroqs/eslint_v1.2.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "smthq@bk.ru",
+            "package": "@zeroqs/eslint",
+            "commit": "not available",
+            "comment": "fix: update effector plugin configuration"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 26 Mar 2025 00:12:10 GMT",
       "version": "1.2.1",
       "tag": "@zeroqs/eslint_v1.2.1",
