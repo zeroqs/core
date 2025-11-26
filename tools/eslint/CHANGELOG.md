@@ -1,8 +1,16 @@
 # Change Log - @zeroqs/eslint
 
-This log was last generated on Wed, 26 Mar 2025 00:32:37 GMT and should not be manually modified.
+This log was last generated on Wed, 26 Nov 2025 13:18:57 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.3.0
+
+Wed, 26 Nov 2025 13:18:57 GMT
+
+### Minor changes
+
+- Update ESLint dependencies to latest versions: @antfu/eslint-config 6.2.0, @eslint-react/eslint-plugin 2.3.9, eslint-plugin-react-hooks 7.0.1 (smthq@bk.ru)
 
 ## 1.2.6
 
